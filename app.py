@@ -1,7 +1,7 @@
-from flask import Flask
-app = Flask(__name__)
+import hug
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello, Docker!'
+@hug.get('/')
+def hello(request):
+    print(request)
+    return {"Hello World": 1}
