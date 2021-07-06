@@ -26,7 +26,7 @@ def get_un_capacitado(id_capacitado: hug.types.number):
     return capacitaciones
 
 
-@hug.get('/habilitacion/recursos/{id_capcitacion}')
+@hug.get('/habilitacion/recursos/{id_capacitacion}')
 def get_recursos(id_capacitacion: hug.types.number):
     return BD_recursos[id_capacitacion]
 
