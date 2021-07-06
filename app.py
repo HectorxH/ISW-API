@@ -16,12 +16,12 @@ def get_todos_capacitados(id_capacitacion: hug.types.text):
 
 
 @hug.get('/habilitacion/capacitaciones/{id_capacitado}')
-def get_un_capacitado(id_capacitado: hug.type.text):
+def get_un_capacitado(id_capacitado: hug.types.text):
     return {"Hello World": 1}
 
 
 @hug.get('/habilitacion/recursos/{id_capcitacion}')
-def get_recursos(id_capacitacion: hug.type.text):
+def get_recursos(id_capacitacion: hug.types.text):
     return BD_recursos[id_capacitacion]
 
 
