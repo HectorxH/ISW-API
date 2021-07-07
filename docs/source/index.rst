@@ -15,113 +15,30 @@ Métodos
 
 GET habilitacion/capacitados
 +++++++++++++
-Projects
-~~~~~~~~
+.. http:get:: habilitacion/capacitados
 
-Projects list
-+++++++++++++
+    Obtener ids de personas capacitadas en cada habilitación
 
-.. http:get:: /api/v3/projects/
-
-    Retrieve a list of all the projects for the current logged in user.
-
-    **Example request**:
+    **Request de ejemplo**:
 
     .. tabs::
 
         .. code-tab:: bash
 
-            $ curl -H "Authorization: Token <token>" https://readthedocs.org/api/v3/projects/
+            $ curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitados'
 
-        .. code-tab:: python
-
-            import requests
-            URL = 'https://readthedocs.org/api/v3/projects/'
-            TOKEN = '<token>'
-            HEADERS = {'Authorization': f'token {TOKEN}'}
-            response = requests.get(URL, headers=HEADERS)
-            print(response.json())
-
-    **Example response**:
+    **Ejemplo de respuesta**:
 
     .. sourcecode:: json
 
         {
-            "count": 25,
-            "next": "/api/v3/projects/?limit=10&offset=10",
-            "previous": null,
-            "results": [{
-                "id": 12345,
-                "name": "Pip",
-                "slug": "pip",
-                "created": "2010-10-23T18:12:31+00:00",
-                "modified": "2018-12-11T07:21:11+00:00",
-                "language": {
-                    "code": "en",
-                    "name": "English"
-                },
-                "programming_language": {
-                    "code": "py",
-                    "name": "Python"
-                },
-                "repository": {
-                    "url": "https://github.com/pypa/pip",
-                    "type": "git"
-                },
-                "default_version": "stable",
-                "default_branch": "master",
-                "subproject_of": null,
-                "translation_of": null,
-                "urls": {
-                    "documentation": "http://pip.pypa.io/en/stable/",
-                    "home": "https://pip.pypa.io/"
-                },
-                "tags": [
-                    "disutils",
-                    "easy_install",
-                    "egg",
-                    "setuptools",
-                    "virtualenv"
-                ],
-                "users": [
-                    {
-                        "username": "dstufft"
-                    }
-                ],
-                "active_versions": {
-                    "stable": "{VERSION}",
-                    "latest": "{VERSION}",
-                    "19.0.2": "{VERSION}"
-                },
-                "_links": {
-                    "_self": "/api/v3/projects/pip/",
-                    "versions": "/api/v3/projects/pip/versions/",
-                    "builds": "/api/v3/projects/pip/builds/",
-                    "subprojects": "/api/v3/projects/pip/subprojects/",
-                    "superproject": "/api/v3/projects/pip/superproject/",
-                    "redirects": "/api/v3/projects/pip/redirects/",
-                    "translations": "/api/v3/projects/pip/translations/"
-                }
-            }]
+           "1": [3, 4],
+           "2": [],
+           "3": [3, 7, 5],
+           "4": [7],
+           "5": [3, 5],
+           "6": [1, 2, 3, 5]
         }
-
-    :query string language: language code as ``en``, ``es``, ``ru``, etc.
-    :query string programming_language: programming language code as ``py``, ``js``, etc.
-
-    The ``results`` in response is an array of project data,
-    which is same as :http:get:`/api/v3/projects/(string:project_slug)/`.
-
-    .. note::
-
-       .. FIXME: we can't use :query string: here because it doesn't render properly
-
-      :doc:`Read the Docs for Business </commercial/index>`, also accepts
-
-      :Query Parameters:
-
-         * **expand** (*string*) -- with ``organization`` and ``teams``.
-
-   
 
 GET habilitacion/capacitados
 +++++++++++++
