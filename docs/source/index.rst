@@ -17,7 +17,7 @@ GET habilitacion/capacitados
 +++++++++++++
 .. http:get:: habilitacion/capacitados
 
-    Obtiene los ids de personas capacitadas en cada habilitación. Retorna un JSON con listas de personas capacitadas asociadas a los ids de las capacitaciones disponibles.  
+    Obtiene los ids de personas capacitadas en cada habilitación. 
     
     :query None: no recibe parametros
     
@@ -28,7 +28,15 @@ GET habilitacion/capacitados
         .. code-tab:: bash
 
             $ curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitados'
-   
+            
+   **Formato de respuesta**:   
+    Retorna un JSON con listas de personas capacitadas asociadas a los ids de las capacitaciones disponibles. 
+    
+    .. sourcecode:: json
+    {
+         id: list of integers
+    }
+    
     **Ejemplo de respuesta**:
     
     .. sourcecode:: json
@@ -41,12 +49,14 @@ GET habilitacion/capacitados
            "5": [3, 5],
            "6": [1, 2, 3, 5]
         }
+        
+    
 
-GET /habilitacion/{id_persona}{id_capacitacion}
+GET /habilitacion/{id_persona}/{id_capacitacion}
 +++++++++++++
-.. http:get:: /habilitacion/{id_persona}{id_capacitacion}
+.. http:get:: /habilitacion/{id_persona}/{id_capacitacion}
 
-    Método que permite revisar si una persona de `id = id_persona` ha realizado la capacitación de `id = id_capacitacion`. Retorna un booleano correspondiente al valor de evaluación de si la persona realizó la capacitación o no.  
+    Método que permite revisar si una persona de `id = id_persona` ha realizado la capacitación de `id = id_capacitacion`.
     
     :query id_personas: id de una persona
     :type id_persona: int
@@ -60,12 +70,17 @@ GET /habilitacion/{id_persona}{id_capacitacion}
         .. code-tab:: bash
 
             $ curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitado/3/2'
+    
+    **Formato de respuesta**:   
+    Retorna un booleano correspondiente al valor de evaluación de si la persona realizó la capacitación o no.   
    
     **Ejemplo de respuesta**:
    
     .. sourcecode:: json
 
         false
+        
+
          
     
       
