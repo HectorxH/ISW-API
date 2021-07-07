@@ -18,8 +18,8 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'ISW-API'
-copyright = '2021, Hector Larrañaga'
-author = 'Hector Larrañaga'
+copyright = '2021, Grupo 27'
+author = 'Hector Larrañaga, Anastasiia Fedorova'
 
 
 # -- General configuration ---------------------------------------------------
