@@ -3,31 +3,24 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Documentación de API para el ramo ISW-INF225
+API v1
 ===================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-
 Métodos
-~~~~~~~~
+--------------------------------
 
+GET habilitacion/capacitados
 +++++++++++++
 
 .. http:get:: habilitacion/capacitados
 
     Obtener ids de personas capacitadas en cada habilitación
 
-    **Example request**:
+    **Request de ejemplo**:
 
     .. tabs::
 
@@ -35,7 +28,7 @@ Métodos
 
             $ curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitados'
 
-    **Example response**:
+    **Ejemplo de respuesta**:
 
     .. sourcecode:: json
 
@@ -48,8 +41,27 @@ Métodos
            "6": [1, 2, 3, 5]
         }
 
-    :None
+   
 
+GET habilitacion/capacitados
++++++++++++++
+.. http:get:: /habilitacion/{id_persona}{id_capacitacion}
+
+    étodo que permite revisar si una persona de `id = id_persona` ha realizado la capacitación de `id = id_capacitacion`
+    **Request de ejemplo**:
+
+    .. tabs::
+
+        .. code-tab:: bash
+
+            $ curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitado/3/2'
+
+    **Ejemplo de respuesta**:
+
+    .. sourcecode:: json
+
+        false
+   
     
 
 
