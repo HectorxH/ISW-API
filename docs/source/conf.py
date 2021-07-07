@@ -30,7 +30,8 @@ author = 'Hector Larrañaga, Anastasiia Fedorova'
 extensions = [
 	'myst_parser',
 	'sphinx_rtd_theme',
-	'sphinx_tabs.tabs'
+	'sphinx_tabs.tabs',
+	'sphinxcontrib.httpdomain'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
