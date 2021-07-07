@@ -29,14 +29,16 @@ GET habilitacion/capacitados
 
             $ curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitados'
             
-   **Formato de respuesta**:   
+    **Formato de respuesta**:   
+    
     Retorna un JSON con listas de personas capacitadas asociadas a los ids de las capacitaciones disponibles. 
     
     .. sourcecode:: json
-    {
-         id: list of integers
-    }
     
+      {
+         id: list of integers
+      }
+      
     **Ejemplo de respuesta**:
     
     .. sourcecode:: json
@@ -72,6 +74,7 @@ GET /habilitacion/{id_persona}/{id_capacitacion}
             $ curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitado/3/2'
     
     **Formato de respuesta**:   
+    
     Retorna un booleano correspondiente al valor de evaluación de si la persona realizó la capacitación o no.   
    
     **Ejemplo de respuesta**:
