@@ -16,10 +16,9 @@ Métodos
 GET habilitacion/capacitados
 +++++++++++++
 .. http:get:: habilitacion/capacitados
-
-    Obtener ids de personas capacitadas en cada habilitación
-    Retorna un JSON con listas de personas capacitadas asociadas a los ids de las capacitaciones disponibles.
-
+    Obtiene los ids de personas capacitadas en cada habilitación
+    Retorna un JSON con listas de personas capacitadas asociadas a los ids de las capacitaciones disponibles.  
+   
     **Request de ejemplo**:
 
     .. tabs::
@@ -44,9 +43,13 @@ GET habilitacion/capacitados
 GET habilitacion/capacitados
 +++++++++++++
 .. http:get:: /habilitacion/{id_persona}{id_capacitacion}
-
+   :param id_personas: post's unique id
+   :type id_persona: int
+   :param id_capacitacion: post's unique id
+   :type id_capacitacion: int
+   
     Método que permite revisar si una persona de `id = id_persona` ha realizado la capacitación de `id = id_capacitacion`.
-    Retorna un booleano correspondiente al valor de evaluación de si la persona realizó la capacitación o no.
+    Retorna un booleano correspondiente al valor de evaluación de si la persona realizó la capacitación o no.  
     
     **Request de ejemplo**:
 
