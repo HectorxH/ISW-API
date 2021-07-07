@@ -36,7 +36,9 @@ GET habilitacion/capacitados
     .. sourcecode:: json
     
       {
-         id: list of integers
+         id_capacitacion1: list of integers
+         id_capacitacion2: list of integers
+         ...
       }
       
     **Ejemplo de respuesta**:
