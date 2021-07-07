@@ -44,7 +44,7 @@ GET habilitacion/capacitados
 +++++++++++++
 .. http:get:: /habilitacion/{id_persona}{id_capacitacion}
 
-    étodo que permite revisar si una persona de `id = id_persona` ha realizado la capacitación de `id = id_capacitacion`
+    Método que permite revisar si una persona de `id = id_persona` ha realizado la capacitación de `id = id_capacitacion`
     **Request de ejemplo**:
 
     .. tabs::
