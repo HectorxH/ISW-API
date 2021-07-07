@@ -18,7 +18,9 @@ GET habilitacion/capacitados
 .. http:get:: habilitacion/capacitados
 
     Obtiene los ids de personas capacitadas en cada habilitación. Retorna un JSON con listas de personas capacitadas asociadas a los ids de las capacitaciones disponibles.  
-   
+    
+    :query None: no recibe parametros
+    
     **Request de ejemplo**:
 
     .. tabs::
@@ -46,9 +48,9 @@ GET /habilitacion/{id_persona}{id_capacitacion}
 
     Método que permite revisar si una persona de `id = id_persona` ha realizado la capacitación de `id = id_capacitacion`. Retorna un booleano correspondiente al valor de evaluación de si la persona realizó la capacitación o no.  
     
-    :param id_personas: id de una persona
+    :query id_personas: id de una persona
     :type id_persona: int
-    :param id_capacitacion: id de una capacitación
+    :query id_capacitacion: id de una capacitación
     :type id_capacitacion: int
    
     **Request de ejemplo**:
@@ -58,12 +60,14 @@ GET /habilitacion/{id_persona}{id_capacitacion}
         .. code-tab:: bash
 
             $ curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitado/3/2'
-
+   
     **Ejemplo de respuesta**:
-
+   
     .. sourcecode:: json
 
         false
+         
+    
       
    
     
