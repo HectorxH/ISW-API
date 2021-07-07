@@ -30,7 +30,6 @@ author = 'Hector Larrañaga, Anastasiia Fedorova'
 extensions = [
 	'myst_parser',
 	'sphinx_rtd_theme',
-	'sphinxcontrib.httpdomain',
 	'sphinx_tabs.tabs'
 ]
 
