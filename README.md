@@ -17,10 +17,12 @@ Universidad Técnica Santa María <br/>
 La API posee el enpoint público en AWS. La documentación de la API se encuentra [en Read The Docs](https://isw-api.readthedocs.io/es/main/)
 
 ### Testing:
-Se implementa un programa test.py que verifica el correcto funcionamiento de la API.Para correr el programa se debe ejecutar alguno de los siguientes comandos:
+Se implementa un programa test.py que verifica el correcto funcionamiento de la API. Para correr el programa se debe ejecutar alguno de los siguientes comandos:
 
 `python3 test.py -v`- este comando corre el programa e imprime los estados detodos los tests durante su ejecución.
-`python3 test.py` - este comando corre el programa.El programa no imprime nada por la pantalla en caso de que todos los test fueron exitosos.
+
+`python3 test.py` - este comando corre el programa. El programa no imprime nada por la pantalla en caso de que todos los test fueron exitosos.  
+
 `python3 test.py --url` - este comando corre el programa y prueba todos los métodos para la url específica(que debe incluir el puerto).Por defecto la url corresponde a IP de la instancia en AWS junto con el puerto (8000).
 
 ### Métodos implementados:
