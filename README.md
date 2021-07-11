@@ -1,4 +1,3 @@
-[![Documentation Status](https://readthedocs.org/projects/isw-api/badge/?version=main)](https://isw-api.readthedocs.io/es/main/?badge=main)
 # API Experimental ISW225-SJ27
 
 ## About
@@ -14,10 +13,17 @@ Proyecto de ramo *Ingeniería de Software: INF 225* <br/>
 Universidad Técnica Santa María <br/>
 2021-1
 
-### Instrucciones de uso:
+## Instrucciones de uso:
 La API posee el enpoint público en AWS. La documentación de la API se encuentra [en Read The Docs](https://isw-api.readthedocs.io/es/main/)
 
-#### Métodos implementados:
+### Testing:
+Se implementa un programa test.py que verifica el correcto funcionamiento de la API.Para correr el programa se debe ejecutar alguno de los siguientes comandos:
+
+`python3 test.py -v`- este comando corre el programa e imprime los estados detodos los tests durante su ejecución.
+`python3 test.py` - este comando corre el programa.El programa no imprime nada por la pantalla en caso de que todos los test fueron exitosos.
+`python3 test.py --url` - este comando corre el programa y prueba todos los métodos para la url específica(que debe incluir el puerto).Por defecto la url corresponde a IP de la instancia en AWS junto con el puerto (8000).
+
+### Métodos implementados:
 Método GET /habilitacion/capacitaciones - método que se encarga de entregar todas las capacitaciones existentes en el sistema  
 ```curl
 curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitaciones'
@@ -41,7 +47,7 @@ Método GET /habilitacion/recursos/{id_capacitacion} - método que permite obten
 curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/recursos/2
 ```
 
-Método GET /habilitacion/capacitado/{id_persona}/{id_capacitacion} - método que permite revisar si una persona de id=X ha realizado la capacitación de id=Y. Por ejemplo, para revisar si la persona con id=3 tiene capacitación de id=2 podemos hacer el siguiente request:
+Método GET /habilitacion/capacitado/{id_persona}/{id_capacitacion} - método que permite revisar si una persona de id=X ha realizado la capacitación de id=Y. Por ejemplo, para revisar si la persona con id=3 tiene capacitación deid=2podemos hacer el siguiente request:
 ```curl
 curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitado/3/2'
 ```
