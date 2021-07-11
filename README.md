@@ -1,3 +1,4 @@
+[![Documentation Status](https://readthedocs.org/projects/isw-api/badge/?version=main)](https://isw-api.readthedocs.io/es/main/?badge=main)
 # API Experimental ISW225-SJ27
 
 ## About
