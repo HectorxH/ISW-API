@@ -40,7 +40,7 @@ Método GET /habilitacion/recursos/{id_capacitacion} - método que permite obten
 curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/recursos/2
 ```
 
-Método GET /habilitacion/capacitado/{id_persona}/{id_capacitacion} - método que permite revisar si una persona de id=X ha realizado la capacitación de id=Y. Por ejemplo, para revisar si la persona con id=3 tiene capacitación deid=2podemos hacer el siguiente request:
+Método GET /habilitacion/capacitado/{id_persona}/{id_capacitacion} - método que permite revisar si una persona de id=X ha realizado la capacitación de id=Y. Por ejemplo, para revisar si la persona con id=3 tiene capacitación de id=2 podemos hacer el siguiente request:
 ```curl
 curl --location --request GET 'ec2-18-221-241-253.us-east-2.compute.amazonaws.com:8000/habilitacion/capacitado/3/2'
 ```
